@@ -1,4 +1,5 @@
 #!/bin/bash
+
 ID=$($id -u)
 
 TIMESTAMP=$(date +%F-%H-%M-%S)
@@ -16,8 +17,6 @@ else
    echo "$2 is failed"
  fi
 }
-
-ID=$($id -u)
 
 if [ $ID -ne 0 ]
 then

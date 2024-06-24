@@ -1,9 +1,10 @@
 #!/bin/bash
-
 ID=$($id -u)
+
 TIMESTAMP=$(date +%F-%H-%M-%S)
 
-LOGFILE="/tmp/$0-$TIMESTAMP
+LOGFILE="/tmp/$0-$TIMESTAMP.log" 
+
 
 VALIDATE( ){
 
@@ -26,11 +27,12 @@ else
    echo "you are root user"
 fi
 
-yum install git -y
+yum install git -y &>> $logfile
 
 VALIDATE $?"git installation is sucess"
 
 
-yum install mysql -y
+yum install mysql -y &>> $logfile
 
 VALIDATE $?"mysql installation is sucess"
+

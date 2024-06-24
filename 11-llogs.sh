@@ -27,12 +27,12 @@ else
    echo "you are root user"
 fi
 
-yum install git -y &>> $logfile
+yum install git -y &>> $LOGFILE
 
 VALIDATE $?"git installation is sucess"
 
 
-yum install mysql -y &>> $logfile
+yum install mysql -y &>> $LOGFILE
 
 VALIDATE $?"mysql installation is sucess"
 

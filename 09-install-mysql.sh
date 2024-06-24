@@ -9,10 +9,10 @@ else
    echo "you are root user"
 fi
 
-yum install git -y
+yum install gittt -y
 if [ $? -ne 0 ]
 then
-echo "error::installing mysqllll is failed"
+echo "error::installing mysql is failed"
 exit 1
 else"installing mysql is sucess"
 fi

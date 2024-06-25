@@ -11,7 +11,7 @@ echo " you are root acess"
 fi
 echo "all arguments passed $@"
 
-yum install mysql -y
+yum installi mysql -y
 
 if [ $? -ne 0 ]
 then

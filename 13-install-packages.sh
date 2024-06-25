@@ -40,11 +40,13 @@ do
   
   yum  list install $package &>> $  LOGFILE # check installed or not
    if [ $? -ne 0 ] 
-   then
-     yum install $package -y  &>> $LOGFILE
-     VALIDATE $? "installation of $package " #validate
+   
+      then
+        yum install $package -y  &>> $LOGFILE
+        VALIDATE $? "installation of $package " #validate
 
-     else
-     echo -e "$package" is already installed ...$Y skipping $N"
+      else
+        echo -e "$package" is already installed ...$Y skipping $N"
      fi
-     done
+     
+done

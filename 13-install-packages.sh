@@ -11,10 +11,10 @@ N="\e[0m"
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
-echo "scriptstartted executing at $TIMESTAMP"&>. $LOGFILE
+echo "script startted executing at $TIMESTAMP"&>> $LOGFILE
 
 VALIDATE(){
-    IF [ $1 -NE 0 ]
+    if [ $1 -ne 0 ]
     then
     echo -e"$2.....$R failed $N"
     else

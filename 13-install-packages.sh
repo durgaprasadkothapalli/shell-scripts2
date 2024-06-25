@@ -9,3 +9,4 @@ exit 1
 else
 echo "are root"
 fi
+echo "all arguments passed $@"

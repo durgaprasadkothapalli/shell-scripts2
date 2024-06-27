@@ -17,8 +17,9 @@ VALIDATE(){
     if [ $1 -ne 0 ]
     then
     echo -e"$2.....$R failed $N"
+    exit 1
     else
-    echo-e "$2....$g sucess $N"
+    echo -e "$2....$G sucess $N"
 
     fi
 }
@@ -38,7 +39,7 @@ fi
 for package in $@
 do
   
-  yum  list install $package &>> $  LOGFILE # check installed or not
+  yum  list install $package &>> $LOGFILE # check installed or not
    if [ $? -ne 0 ] 
    
       then

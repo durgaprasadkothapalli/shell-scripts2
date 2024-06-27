@@ -11,25 +11,25 @@ N="\e[0m"
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
-echo "script startted executing at $TIMESTAMP"&>> $LOGFILE
+echo "script startted executing at $TIMESTAMP" &>> $LOGFILE
 
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-    echo -e"$2.....$R failed $N"
-    exit 1
+       echo -e"$2.....$R failed $N"
+    
     else
-    echo -e "$2....$G sucess $N"
+        echo -e "$2....$G sucess $N"
 
     fi
 }
 
 if [ $ID -ne 0 ]
 then
-echo "error ;; please run the script with root acess"
+    echo "error ;; please run the script with root acess"
 exit 1
 else
-echo " you are root acess"
+     echo " you are root acess"
 fi
 
 #echo "all arguments passed $@"

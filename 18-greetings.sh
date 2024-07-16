@@ -12,10 +12,10 @@ USAGE(){
 
  }
 
-    while getopts ":n :w:h"opt; do
+    while getopts ":n:w:h"opt; do
         case $opt in
            n) NAME="$OPTARG";;
            W) WISHES="$OPTARG";;
             h|*) USAGE; exit;;
          esac
-     done
+    done

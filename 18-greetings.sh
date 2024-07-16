@@ -16,6 +16,6 @@ USAGE(){
         case $opt in
            n) NAME="$OPTARG";;
            W) WISHES="$OPTARG";;
-            h|*) USAGE;exit;;
+            h|*) USAGE; exit;;
          esac
      done
